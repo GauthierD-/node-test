@@ -1,0 +1,6 @@
+{
+    "name"          : "node-test",
+    "version"       : "0.1",
+    "description"   : "litle stressTest for node server with eventEmitter",
+    "keywords"      : "
+}

@@ -1,7 +1,8 @@
 Avant la mise du repo en Public
 -------------------------------
-    * Mettre en commentaire tout ce qui concerne les loop2 et loop3 
     * [Check]Commentaires en anglais
+    * Changer loop.js pour le public la cest pour vcult spa BIENNNN
+    * changer le Nom du repo/projet    
 
 Avant la mise sur le NPM
 ------------------------
