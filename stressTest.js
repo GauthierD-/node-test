@@ -9,8 +9,8 @@ var StressTest = require('./BeloolaTesting.js').createBeloolaTesting();
 
 if(!options.get('numberUser')){
 	options.help();
-} else if(options.get('moveUserOnly') && options.get('teleportMove')) {  
-    var m = options.get('moveUserOnly');
+} else if(options.get('yourLoop2') && options.get('teleportMove')) {  
+    var m = options.get('yourLoop2');
     var t = options.get('teleportMove');
 
     if(m==="true" && t==="true") {
@@ -22,8 +22,8 @@ if(!options.get('numberUser')){
     } else if((t) && (t!=="true") && (t!=="false")) {
        options.help(); 
     }
-} else if(options.get('moveUserOnly')){
-    var m = options.get('moveUserOnly');
+} else if(options.get('yourLoop2')){
+    var m = options.get('yourLoop2');
     
     if((m) && (m!=="true") && (m!=="false")) {
         options.help();
@@ -40,7 +40,7 @@ if(!options.get('numberUser')){
 // Configuration user 
 StressTest.config(
     options.get('numberUser'),
-    options.get('moveUserOnly'),
+    options.get('yourLoop2'),
     options.get('teleportMove')
 );
 

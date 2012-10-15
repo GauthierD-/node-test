@@ -16,7 +16,7 @@ function BeloolaTesting() {
     "use strict";
     EventEmitter.call(this);
     this.numberUser = null,
-    this.moveUserOnly= null,
+    this.yourLoop2= null,
     this.teleportMove = null; 
 }
 
@@ -32,12 +32,12 @@ BeloolaTesting.prototype.setNumberUser = function(numberUser) {
     }
 };
 
-BeloolaTesting.prototype.setBoolMoveUserOnly = function(moveUserOnly) {
+BeloolaTesting.prototype.setBoolyourLoop2 = function(yourLoop2) {
     "use strict";
-    if(moveUserOnly === undefined) {
-        this.moveUserOnly = false;    
+    if(yourLoop2 === undefined) {
+        this.yourLoop2 = false;    
     } else {
-        this.moveUserOnly = moveUserOnly;
+        this.yourLoop2 = yourLoop2;
     }
 };
 
@@ -51,11 +51,11 @@ BeloolaTesting.prototype.setBoolTeleportMove = function(teleportMove) {
 };
 
 //Configuration de l'objet BeloolaTesting
-BeloolaTesting.prototype.config = function(numberUser, moveUserOnly, teleportMove) {
+BeloolaTesting.prototype.config = function(numberUser, yourLoop2, teleportMove) {
     "use strict";
     var self = this;
     this.setNumberUser(numberUser);
-    this.setBoolMoveUserOnly(moveUserOnly);
+    this.setBoolyourLoop2(yourLoop2);
     this.setBoolTeleportMove(teleportMove);
     self.colorWelcome();
 };
@@ -65,7 +65,7 @@ BeloolaTesting.prototype.start = function() {
     var self = this;
     var nameLoop = null;
 
-    if(this.moveUserOnly === 'true') {
+    if(this.yourLoop2 === 'true') {
         nameLoop = "loopMove.js";
     } else if(this.teleportMove === 'true') {
         nameLoop = "loopTeleportMove.js";
