@@ -37,18 +37,18 @@ if(!options.get('numberUser')){
  
 }
 
-// Configuration du test avec les données utilisateurs
+// Configuration user 
 StressTest.config(
     options.get('numberUser'),
     options.get('moveUserOnly'),
     options.get('teleportMove')
 );
 
-// Lancement du test
+// test start
 Metric.setStartTime();
 StressTest.start();
 
-// Mise en place de l'interface utilisateur \o/ L O L
+// User Interface \o/ 
 StressTest.on('colorWelcome', function(){
 
 var welcomeMessage = [
