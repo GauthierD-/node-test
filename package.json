@@ -1,6 +1,20 @@
 {
-    "name"          : "node-test",
-    "version"       : "0.1",
-    "description"   : "litle stressTest for node server with eventEmitter",
-    "keywords"      : "
+    "name"          :   "node-test",
+    "version"       :   "0.1",
+    "description"   :   "litle stressTest for node server with eventEmitter",
+    "homepage"      :   "https://github.com/GauthierD-/node-stressTest",  
+    "keywords"      :   ["stressTest", "server", "loadtesting"],
+    "author"        :   "Gauthier 'GauthierD-' Deroo <g.deroo@gmail.com>",
+    "repository"    :   {
+        "type"  :   "git",
+        "url"   :   "https://github.com/GauthierD-/node-stressTest"
+    },
+    "devDependencies"   :   {
+        "cluster-master"    :   "0.0.9",
+        "colors"            :   "0.6-1",
+        "optparse"          :   "1.0.3",
+        "socket.io-client"  :   "0.9.10"
+    }
+    "main"          :   "stressTest",
+    "engine"        :   { "node": ">= 0.8.1" }  
 }
