@@ -1,6 +1,6 @@
 //
 //
-// Toutes mes metric sont disponible grace a ce fichier
+// Metrics.js - all metrics of the host machine 
 //
 //
 exports = module.exports = Metric;
@@ -44,14 +44,12 @@ Metric.prototype.getCpuUsage = function() {
 	return loadCPU;
 };
 
-//pour calculer la latence TODO
 Metric.prototype.setStartTime = function() {
 	"use strict";
 	this.startTime = new Date().getTime();
 };
 
-//TODO pour la latence pour avoir un truc potable
-Metric.prototype.getLatency = function() {
+Metric.prototype.getTimeTest = function() {
 	"use strict";
 	var latency = new Date().getTime() - this.startTime;
 	return latency + ' ms';

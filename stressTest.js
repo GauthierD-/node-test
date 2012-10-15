@@ -9,9 +9,9 @@ var StressTest = require('./BeloolaTesting.js').createBeloolaTesting();
 
 if(!options.get('numberUser')){
 	options.help();
-} else if(options.get('yourLoop2') && options.get('teleportMove')) {  
+} else if(options.get('yourLoop2') && options.get('yourLoop3')) {  
     var m = options.get('yourLoop2');
-    var t = options.get('teleportMove');
+    var t = options.get('yourLoop3');
 
     if(m==="true" && t==="true") {
         options.help();
@@ -28,8 +28,8 @@ if(!options.get('numberUser')){
     if((m) && (m!=="true") && (m!=="false")) {
         options.help();
     }
-} else if(options.get('teleportMove')){
-    var t = options.get('teleportMove');
+} else if(options.get('yourLoop3')){
+    var t = options.get('yourLoop3');
     
     if((t) && (t!=="true") && (t!=="false")) {
         options.help();
@@ -41,7 +41,7 @@ if(!options.get('numberUser')){
 StressTest.config(
     options.get('numberUser'),
     options.get('yourLoop2'),
-    options.get('teleportMove')
+    options.get('yourLoop3')
 );
 
 // test start
@@ -84,7 +84,7 @@ process.on('exit', function() {
     console.log('  CPU load Average : '.grey.bold + Metric.getCpuUsage()) ; 
     console.log('  Memory use       : '.grey.bold + Metric.getMemUse());
     console.log('  % Memory:        : '.grey.bold + Metric.getMemUsePercent());
-    console.log('  Temps du test    : '.grey.bold + Metric.getLatency());
+    console.log('  Temps du test    : '.grey.bold + Metric.getTimeTest());
     console.log("---------------------------------------------------------------------------".green.bold);
 
     process.exit(0);

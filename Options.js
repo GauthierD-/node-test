@@ -11,13 +11,13 @@ var util = require('util');
 var Options = {
 	numberUser: undefined,
 	yourLoop2: undefined,
-	teleportMove: undefined //method FromSenderToAll() dans server.js
+	yourLoop3: undefined 
 };
 
 var switches = [
 	['-n', '--numberUser NUMBER', 'Numbers of client while the stressTest'],
 	['-m', '--yourLoop2 BOOLEAN', 'Default: false'],
-	['-t', '--teleportMove BOOLEAN', 'This loop simulate teleport & move avatar. Default: false\n']
+	['-t', '--yourLoop3 BOOLEAN', 'Default: false']
 ];
 
 var parser;
@@ -46,9 +46,9 @@ parser.on('yourLoop2', function(opt, value){
 	Options.yourLoop2 = String(value);
 });
 
-parser.on('teleportMove', function(opt, value){
+parser.on('yourLoop3', function(opt, value){
 	"use strict";
-	Options.teleportMove = String(value);
+	Options.yourLoop3 = String(value);
 });
 
 exports.get = function(option){

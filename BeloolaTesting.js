@@ -1,7 +1,6 @@
 //
 //
-// Objet de test qui configure le stressTest et lance le test
-// grace a la méthode .start().
+// this object is config with the choose of user for the test
 //
 //
 exports = module.exports = BeloolaTesting;
@@ -17,10 +16,9 @@ function BeloolaTesting() {
     EventEmitter.call(this);
     this.numberUser = null,
     this.yourLoop2= null,
-    this.teleportMove = null; 
+    this.yourLoop3 = null; 
 }
 
-// l'objet beloolaTesting hérite de EventEmitter
 util.inherits(BeloolaTesting, EventEmitter);
 
 BeloolaTesting.prototype.setNumberUser = function(numberUser) {
@@ -41,34 +39,35 @@ BeloolaTesting.prototype.setBoolyourLoop2 = function(yourLoop2) {
     }
 };
 
-BeloolaTesting.prototype.setBoolTeleportMove = function(teleportMove) {
+BeloolaTesting.prototype.setBoolyourLoop3 = function(yourLoop3) {
     "use strict";
-    if(teleportMove === undefined) {
-        this.teleportMove = false;    
+    if(yourLoop3 === undefined) {
+        this.yourLoop3 = false;    
     } else {
-        this.teleportMove = teleportMove;
+        this.yourLoop3 = yourLoop3;
     }
 };
 
-//Configuration de l'objet BeloolaTesting
-BeloolaTesting.prototype.config = function(numberUser, yourLoop2, teleportMove) {
+// Object configuration
+BeloolaTesting.prototype.config = function(numberUser, yourLoop2, yourLoop3) {
     "use strict";
     var self = this;
     this.setNumberUser(numberUser);
     this.setBoolyourLoop2(yourLoop2);
-    this.setBoolTeleportMove(teleportMove);
+    this.setBoolyourLoop3(yourLoop3);
     self.colorWelcome();
 };
 
+// Launch the test on server
 BeloolaTesting.prototype.start = function() {
     "use strict";
     var self = this;
     var nameLoop = null;
 
     if(this.yourLoop2 === 'true') {
-        nameLoop = "loopMove.js";
-    } else if(this.teleportMove === 'true') {
-        nameLoop = "loopTeleportMove.js";
+        nameLoop = "loop2.js";
+    } else if(this.yourLoop3 === 'true') {
+        nameLoop = "loop3.js";
     } else {
         nameLoop = "loop.js";
     }
