@@ -3,7 +3,7 @@
 // this object is config with the choose of user for the test
 //
 //
-exports = module.exports = BeloolaTesting;
+exports = module.exports = ServerTesting;
 var EventEmitter = require('events').EventEmitter;
 var util = require('util');
 var clusterMaster = require('cluster-master');
@@ -11,7 +11,7 @@ var io = require('socket.io-client');
 var Metric = require('./Metric.js').createMetric();
 
 
-function BeloolaTesting() {
+function ServerTesting() {
     "use strict";
     EventEmitter.call(this);
     this.numberUser = null,
@@ -19,9 +19,9 @@ function BeloolaTesting() {
     this.yourLoop3 = null; 
 }
 
-util.inherits(BeloolaTesting, EventEmitter);
+util.inherits(ServerTesting, EventEmitter);
 
-BeloolaTesting.prototype.setNumberUser = function(numberUser) {
+ServerTesting.prototype.setNumberUser = function(numberUser) {
     "use strict";
     if(numberUser === undefined) {
         this.numberUser = 5;    
@@ -30,7 +30,7 @@ BeloolaTesting.prototype.setNumberUser = function(numberUser) {
     }
 };
 
-BeloolaTesting.prototype.setBoolyourLoop2 = function(yourLoop2) {
+ServerTesting.prototype.setBoolyourLoop2 = function(yourLoop2) {
     "use strict";
     if(yourLoop2 === undefined) {
         this.yourLoop2 = false;    
@@ -39,7 +39,7 @@ BeloolaTesting.prototype.setBoolyourLoop2 = function(yourLoop2) {
     }
 };
 
-BeloolaTesting.prototype.setBoolyourLoop3 = function(yourLoop3) {
+ServerTesting.prototype.setBoolyourLoop3 = function(yourLoop3) {
     "use strict";
     if(yourLoop3 === undefined) {
         this.yourLoop3 = false;    
@@ -49,7 +49,7 @@ BeloolaTesting.prototype.setBoolyourLoop3 = function(yourLoop3) {
 };
 
 // Object configuration
-BeloolaTesting.prototype.config = function(numberUser, yourLoop2, yourLoop3) {
+ServerTesting.prototype.config = function(numberUser, yourLoop2, yourLoop3) {
     "use strict";
     var self = this;
     this.setNumberUser(numberUser);
@@ -59,7 +59,7 @@ BeloolaTesting.prototype.config = function(numberUser, yourLoop2, yourLoop3) {
 };
 
 // Launch the test on server
-BeloolaTesting.prototype.start = function() {
+ServerTesting.prototype.start = function() {
     "use strict";
     var self = this;
     var nameLoop = null;
@@ -80,7 +80,7 @@ BeloolaTesting.prototype.start = function() {
     clusterMaster.quit();
 };
 
-BeloolaTesting.prototype.update = function() {
+ServerTesting.prototype.update = function() {
     "use strict";
     var self = this;
     process.nextTick(function() {
@@ -88,7 +88,7 @@ BeloolaTesting.prototype.update = function() {
     })
 };
 
-BeloolaTesting.prototype.exit = function() {
+ServerTesting.prototype.exit = function() {
     "use strict";
     var self = this;
     
@@ -97,7 +97,7 @@ BeloolaTesting.prototype.exit = function() {
     });
 };
 
-BeloolaTesting.prototype.colorWelcome = function() {
+ServerTesting.prototype.colorWelcome = function() {
     "use strict";
     var self = this;
     process.nextTick(function() {
@@ -105,7 +105,7 @@ BeloolaTesting.prototype.colorWelcome = function() {
     });
 };
 
-exports.createBeloolaTesting = function(){
+exports.createServerTesting = function(){
     "use strict";
     var Self = this;
     return new Self();

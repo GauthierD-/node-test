@@ -5,7 +5,7 @@ var options = require('./Options.js');
 var colors = require('colors');
 var util = require('util');
 options.process();
-var StressTest = require('./BeloolaTesting.js').createBeloolaTesting();
+var StressTest = require('./ServerTesting.js').createServerTesting();
 
 if(!options.get('numberUser')){
 	options.help();
