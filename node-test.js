@@ -65,6 +65,9 @@ util.puts(welcomeMessage.rainbow.bold);
 
 });
 
+// APRES JE CHANGE TOUT METRICS DE LA MACHINE HOTE USELESS
+// ON NEED LES METRICS DU SERVER ATTAQU2 ET PAS LA NOTRE ! USELESS BOY
+
 // display metrics computer host
 StressTest.on('update', function() {
     "use strict";
