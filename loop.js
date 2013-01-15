@@ -20,9 +20,9 @@ process.nextTick(function() {
     socket.emit('connect', mydata);    
 });
 
-//Move avatar 
+//Move user 
 process.nextTick(function(){
-    var orientation = {
+    var  = {
         s   :   0.9108,
         x   :   0.4128,
         y   :   0,

@@ -29,7 +29,7 @@ var help = exports.help = function(){
 };
 
 var parser = new optparse.OptionParser(switches);
-parser.banner = 'stressTest.js [options] only one Boolean arguments must to set at true' 
+parser.banner = 'stressTest.js -n 30 ([options])' 
 
 parser.on('help', function() {
 	"use strict";
