@@ -1,0 +1,284 @@
+{
+  "summary": {
+    "total": {
+      "sloc": 306,
+      "maintainability": 873.8221137927966
+    },
+    "average": {
+      "sloc": 51,
+      "maintainability": "145.64"
+    }
+  },
+  "reports": [
+    {
+      "info": {
+        "file": "Metric.js",
+        "fileShort": "",
+        "fileSafe": "",
+        "link": "files//index.html"
+      },
+      "complexity": {
+        "aggregate": {
+          "line": 6,
+          "complexity": {
+            "sloc": {
+              "physical": 60,
+              "logical": 41
+            },
+            "cyclomatic": 1,
+            "halstead": {
+              "operators": {
+                "distinct": 11,
+                "total": 124,
+                "identifiers": [
+                  "__stripped__"
+                ]
+              },
+              "operands": {
+                "distinct": 42,
+                "total": 129,
+                "identifiers": [
+                  "__stripped__"
+                ]
+              },
+              "length": 253,
+              "vocabulary": 53,
+              "difficulty": 16.892857142857142,
+              "volume": 1449.1638750044895,
+              "effort": 24480.518317040125,
+              "bugs": 0.4830546250014965,
+              "time": 1360.0287953911181
+            }
+          }
+        },
+        "module": "",
+        "maintainability": 127.76843593836648
+      }
+    },
+    {
+      "info": {
+        "file": "Options.js",
+        "fileShort": "Options.js",
+        "fileSafe": "Options_js",
+        "link": "files/Options_js/index.html"
+      },
+      "complexity": {
+        "aggregate": {
+          "line": 7,
+          "complexity": {
+            "sloc": {
+              "physical": 56,
+              "logical": 32
+            },
+            "cyclomatic": 1,
+            "halstead": {
+              "operators": {
+                "distinct": 10,
+                "total": 67,
+                "identifiers": [
+                  "__stripped__"
+                ]
+              },
+              "operands": {
+                "distinct": 43,
+                "total": 100,
+                "identifiers": [
+                  "__stripped__"
+                ]
+              },
+              "length": 167,
+              "vocabulary": 53,
+              "difficulty": 11.627906976744187,
+              "volume": 956.5627159120544,
+              "effort": 11122.822278047144,
+              "bugs": 0.31885423863735146,
+              "time": 617.9345710026191
+            }
+          }
+        },
+        "module": "Options.js",
+        "maintainability": 146.5669426003093
+      }
+    },
+    {
+      "info": {
+        "file": "ServerTesting.js",
+        "fileShort": "ServerTesting.js",
+        "fileSafe": "ServerTesting_js",
+        "link": "files/ServerTesting_js/index.html"
+      },
+      "complexity": {
+        "aggregate": {
+          "line": 6,
+          "complexity": {
+            "sloc": {
+              "physical": 107,
+              "logical": 71
+            },
+            "cyclomatic": 6,
+            "halstead": {
+              "operators": {
+                "distinct": 12,
+                "total": 147,
+                "identifiers": [
+                  "__stripped__"
+                ]
+              },
+              "operands": {
+                "distinct": 53,
+                "total": 180,
+                "identifiers": [
+                  "__stripped__"
+                ]
+              },
+              "length": 327,
+              "vocabulary": 65,
+              "difficulty": 20.37735849056604,
+              "volume": 1969.3142748603045,
+              "effort": 40129.42295941753,
+              "bugs": 0.6564380916201015,
+              "time": 2229.412386634307
+            }
+          }
+        },
+        "module": "ServerTesting.js",
+        "maintainability": 128.7340384367465
+      }
+    },
+    {
+      "info": {
+        "file": "loop.js",
+        "fileShort": "loop.js",
+        "fileSafe": "loop_js",
+        "link": "files/loop_js/index.html"
+      },
+      "complexity": {
+        "aggregate": {
+          "line": 7,
+          "complexity": {
+            "sloc": {
+              "physical": 81,
+              "logical": 44
+            },
+            "cyclomatic": 1,
+            "halstead": {
+              "operators": {
+                "distinct": 8,
+                "total": 87,
+                "identifiers": [
+                  "__stripped__"
+                ]
+              },
+              "operands": {
+                "distinct": 51,
+                "total": 119,
+                "identifiers": [
+                  "__stripped__"
+                ]
+              },
+              "length": 206,
+              "vocabulary": 59,
+              "difficulty": 9.333333333333334,
+              "volume": 1211.8244681685394,
+              "effort": 11310.361702906368,
+              "bugs": 0.40394148938951313,
+              "time": 628.3534279392427
+            }
+          }
+        },
+        "module": "loop.js",
+        "maintainability": 128.75269681737439
+      }
+    },
+    {
+      "info": {
+        "file": "loop2.js",
+        "fileShort": "loop2.js",
+        "fileSafe": "loop2_js",
+        "link": "files/loop2_js/index.html"
+      },
+      "complexity": {
+        "aggregate": {
+          "line": 1,
+          "complexity": {
+            "sloc": {
+              "physical": 1,
+              "logical": 0
+            },
+            "cyclomatic": 1,
+            "halstead": {
+              "operators": {
+                "distinct": 0,
+                "total": 0,
+                "identifiers": [
+                  "__stripped__"
+                ]
+              },
+              "operands": {
+                "distinct": 0,
+                "total": 0,
+                "identifiers": [
+                  "__stripped__"
+                ]
+              },
+              "length": 0,
+              "time": 0,
+              "bugs": 0,
+              "effort": 0,
+              "volume": 0,
+              "difficulty": 0,
+              "vocabulary": 0
+            }
+          }
+        },
+        "module": "loop2.js",
+        "maintainability": 171
+      }
+    },
+    {
+      "info": {
+        "file": "loop3.js",
+        "fileShort": "loop3.js",
+        "fileSafe": "loop3_js",
+        "link": "files/loop3_js/index.html"
+      },
+      "complexity": {
+        "aggregate": {
+          "line": 1,
+          "complexity": {
+            "sloc": {
+              "physical": 1,
+              "logical": 0
+            },
+            "cyclomatic": 1,
+            "halstead": {
+              "operators": {
+                "distinct": 0,
+                "total": 0,
+                "identifiers": [
+                  "__stripped__"
+                ]
+              },
+              "operands": {
+                "distinct": 0,
+                "total": 0,
+                "identifiers": [
+                  "__stripped__"
+                ]
+              },
+              "length": 0,
+              "time": 0,
+              "bugs": 0,
+              "effort": 0,
+              "volume": 0,
+              "difficulty": 0,
+              "vocabulary": 0
+            }
+          }
+        },
+        "module": "loop3.js",
+        "maintainability": 171
+      }
+    }
+  ]
+}

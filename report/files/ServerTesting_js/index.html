@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap-3.0.0-wip.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome-ie7.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="brand" href="http://github.com/jsoverson/plato">Plato on Github</a>
+    <ul class="nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>ServerTesting.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="span6">
+      <h2 class="header">Maintainability</h2>
+      <p class="stat">128.73</p>
+    </div>
+    <div class="span6">
+      <h2 class="header">Estimated # Bugs</h2>
+      <p class="stat">0.66</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span6">
+      <h2 class="header">Difficulty</h2>
+      <p class="stat">20.38</p>
+    </div>
+    <div class="span6">
+      <h2 class="header">SLOC/LSLOC</h2>
+      <p class="stat">107 / 71</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="span6">
+      <h3 class="chart-header">By Complexity</h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="span6">
+      <h3 class="chart-header">By SLOC</h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="span12">//
+//
+// this object is config with the choose of user for the test
+//
+//
+exports = module.exports = ServerTesting;
+var EventEmitter = require('events').EventEmitter;
+var util = require('util');
+var clusterMaster = require('cluster-master');
+var io = require('socket.io-client'); 
+var Metric = require('./Metric.js').createMetric();
+
+
+function ServerTesting() {
+    "use strict";
+    EventEmitter.call(this);
+    this.numberUser = null,
+    this.yourLoop2= null,
+    this.yourLoop3 = null; 
+}
+
+util.inherits(ServerTesting, EventEmitter);
+
+ServerTesting.prototype.setNumberUser = function(numberUser) {
+    "use strict";
+    if(numberUser === undefined) {
+        this.numberUser = 5;    
+    } else {
+        this.numberUser = numberUser;
+    }
+};
+
+ServerTesting.prototype.setBoolyourLoop2 = function(yourLoop2) {
+    "use strict";
+    if(yourLoop2 === undefined) {
+        this.yourLoop2 = false;    
+    } else {
+        this.yourLoop2 = yourLoop2;
+    }
+};
+
+ServerTesting.prototype.setBoolyourLoop3 = function(yourLoop3) {
+    "use strict";
+    if(yourLoop3 === undefined) {
+        this.yourLoop3 = false;    
+    } else {
+        this.yourLoop3 = yourLoop3;
+    }
+};
+
+// Object configuration
+ServerTesting.prototype.config = function(numberUser, yourLoop2, yourLoop3) {
+    "use strict";
+    var self = this;
+    this.setNumberUser(numberUser);
+    this.setBoolyourLoop2(yourLoop2);
+    this.setBoolyourLoop3(yourLoop3);
+    self.colorWelcome();
+};
+
+// Launch the test on server
+ServerTesting.prototype.start = function() {
+    "use strict";
+    var self = this;
+    var nameLoop = null;
+
+    if(this.yourLoop2 === 'true') {
+        nameLoop = "loop2.js";
+    } else if(this.yourLoop3 === 'true') {
+        nameLoop = "loop3.js";
+    } else {
+        nameLoop = "loop.js";
+    }
+
+    self.update();
+    clusterMaster({
+        exec: nameLoop,
+        size: this.numberUser 
+    });
+    clusterMaster.quit();
+};
+
+ServerTesting.prototype.update = function() {
+    "use strict";
+    var self = this;
+    process.nextTick(function() {
+        self.emit('update');
+    })
+};
+
+ServerTesting.prototype.exit = function() {
+    "use strict";
+    var self = this;
+    
+    process.nextTick(function() {
+        self.emit('exit');
+    });
+};
+
+ServerTesting.prototype.colorWelcome = function() {
+    "use strict";
+    var self = this;
+    process.nextTick(function() {
+        self.emit('colorWelcome');
+    });
+};
+
+exports.createServerTesting = function(){
+    "use strict";
+    var Self = this;
+    return new Self();
+};</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ complexity.cyclomatic }} <br>
+    Length : {{ complexity.halstead.length }} <br>
+    Difficulty : {{ complexity.halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ complexity.halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+
+</body>
+</html>

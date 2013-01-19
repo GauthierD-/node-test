@@ -1,0 +1,380 @@
+__report = {
+  "info": {
+    "file": "loop.js",
+    "fileShort": "loop.js",
+    "fileSafe": "loop_js",
+    "link": "files/loop_js/index.html"
+  },
+  "complexity": {
+    "aggregate": {
+      "line": 7,
+      "complexity": {
+        "sloc": {
+          "physical": 81,
+          "logical": 44
+        },
+        "cyclomatic": 1,
+        "halstead": {
+          "operators": {
+            "distinct": 8,
+            "total": 87,
+            "identifiers": [
+              "__stripped__"
+            ]
+          },
+          "operands": {
+            "distinct": 51,
+            "total": 119,
+            "identifiers": [
+              "__stripped__"
+            ]
+          },
+          "length": 206,
+          "vocabulary": 59,
+          "difficulty": 9.333333333333334,
+          "volume": 1211.8244681685394,
+          "effort": 11310.361702906368,
+          "bugs": 0.40394148938951313,
+          "time": 628.3534279392427
+        }
+      }
+    },
+    "functions": [
+      {
+        "name": "<anonymous>",
+        "line": 19,
+        "complexity": {
+          "sloc": {
+            "physical": 3,
+            "logical": 1
+          },
+          "cyclomatic": 1,
+          "halstead": {
+            "operators": {
+              "distinct": 2,
+              "total": 2,
+              "identifiers": [
+                "__stripped__"
+              ]
+            },
+            "operands": {
+              "distinct": 4,
+              "total": 4,
+              "identifiers": [
+                "__stripped__"
+              ]
+            },
+            "length": 6,
+            "vocabulary": 6,
+            "difficulty": 1,
+            "volume": 15.509775004326936,
+            "effort": 15.509775004326936,
+            "bugs": 0.005169925001442312,
+            "time": 0.861654166907052
+          }
+        }
+      },
+      {
+        "name": "<anonymous>",
+        "line": 24,
+        "complexity": {
+          "sloc": {
+            "physical": 22,
+            "logical": 17
+          },
+          "cyclomatic": 1,
+          "halstead": {
+            "operators": {
+              "distinct": 6,
+              "total": 27,
+              "identifiers": [
+                "__stripped__"
+              ]
+            },
+            "operands": {
+              "distinct": 19,
+              "total": 39,
+              "identifiers": [
+                "__stripped__"
+              ]
+            },
+            "length": 66,
+            "vocabulary": 25,
+            "difficulty": 6.157894736842106,
+            "volume": 306.49450852513183,
+            "effort": 1887.3609209179174,
+            "bugs": 0.10216483617504395,
+            "time": 104.85338449543985
+          }
+        }
+      },
+      {
+        "name": "<anonymous>",
+        "line": 48,
+        "complexity": {
+          "sloc": {
+            "physical": 3,
+            "logical": 1
+          },
+          "cyclomatic": 1,
+          "halstead": {
+            "operators": {
+              "distinct": 2,
+              "total": 2,
+              "identifiers": [
+                "__stripped__"
+              ]
+            },
+            "operands": {
+              "distinct": 4,
+              "total": 4,
+              "identifiers": [
+                "__stripped__"
+              ]
+            },
+            "length": 6,
+            "vocabulary": 6,
+            "difficulty": 1,
+            "volume": 15.509775004326936,
+            "effort": 15.509775004326936,
+            "bugs": 0.005169925001442312,
+            "time": 0.861654166907052
+          }
+        }
+      },
+      {
+        "name": "<anonymous>",
+        "line": 53,
+        "complexity": {
+          "sloc": {
+            "physical": 4,
+            "logical": 2
+          },
+          "cyclomatic": 1,
+          "halstead": {
+            "operators": {
+              "distinct": 3,
+              "total": 4,
+              "identifiers": [
+                "__stripped__"
+              ]
+            },
+            "operands": {
+              "distinct": 6,
+              "total": 7,
+              "identifiers": [
+                "__stripped__"
+              ]
+            },
+            "length": 11,
+            "vocabulary": 9,
+            "difficulty": 1.75,
+            "volume": 34.86917501586544,
+            "effort": 61.021056277764515,
+            "bugs": 0.011623058338621813,
+            "time": 3.3900586820980285
+          }
+        }
+      },
+      {
+        "name": "<anonymous>",
+        "line": 59,
+        "complexity": {
+          "sloc": {
+            "physical": 4,
+            "logical": 2
+          },
+          "cyclomatic": 1,
+          "halstead": {
+            "operators": {
+              "distinct": 3,
+              "total": 4,
+              "identifiers": [
+                "__stripped__"
+              ]
+            },
+            "operands": {
+              "distinct": 6,
+              "total": 7,
+              "identifiers": [
+                "__stripped__"
+              ]
+            },
+            "length": 11,
+            "vocabulary": 9,
+            "difficulty": 1.75,
+            "volume": 34.86917501586544,
+            "effort": 61.021056277764515,
+            "bugs": 0.011623058338621813,
+            "time": 3.3900586820980285
+          }
+        }
+      },
+      {
+        "name": "<anonymous>",
+        "line": 65,
+        "complexity": {
+          "sloc": {
+            "physical": 6,
+            "logical": 4
+          },
+          "cyclomatic": 1,
+          "halstead": {
+            "operators": {
+              "distinct": 4,
+              "total": 9,
+              "identifiers": [
+                "__stripped__"
+              ]
+            },
+            "operands": {
+              "distinct": 11,
+              "total": 14,
+              "identifiers": [
+                "__stripped__"
+              ]
+            },
+            "length": 23,
+            "vocabulary": 15,
+            "difficulty": 2.5454545454545454,
+            "volume": 89.85848369899593,
+            "effort": 228.73068577926236,
+            "bugs": 0.02995282789966531,
+            "time": 12.70726032107013
+          }
+        }
+      },
+      {
+        "name": "<anonymous>",
+        "line": 85,
+        "complexity": {
+          "sloc": {
+            "physical": 3,
+            "logical": 1
+          },
+          "cyclomatic": 1,
+          "halstead": {
+            "operators": {
+              "distinct": 2,
+              "total": 2,
+              "identifiers": [
+                "__stripped__"
+              ]
+            },
+            "operands": {
+              "distinct": 3,
+              "total": 3,
+              "identifiers": [
+                "__stripped__"
+              ]
+            },
+            "length": 5,
+            "vocabulary": 5,
+            "difficulty": 1,
+            "volume": 11.60964047443681,
+            "effort": 11.60964047443681,
+            "bugs": 0.0038698801581456034,
+            "time": 0.6449800263576005
+          }
+        }
+      }
+    ],
+    "maintainability": 128.75269681737439,
+    "module": "loop.js"
+  },
+  "jshint": {
+    "messages": [
+      {
+        "severity": "error",
+        "line": 7,
+        "column": 1,
+        "message": "Use the function form of \"use strict\".",
+        "source": "Use the function form of \"use strict\"."
+      },
+      {
+        "severity": "error",
+        "line": 10,
+        "column": 12,
+        "message": "Possible strict violation.",
+        "source": "Possible strict violation."
+      },
+      {
+        "severity": "error",
+        "line": 15,
+        "column": 30,
+        "message": "Extra comma.",
+        "source": "Extra comma."
+      },
+      {
+        "severity": "error",
+        "line": 16,
+        "column": 2,
+        "message": "Missing semicolon.",
+        "source": "Missing semicolon."
+      },
+      {
+        "severity": "error",
+        "line": 8,
+        "column": 10,
+        "message": "'require' is not defined.",
+        "source": "'{a}' is not defined."
+      },
+      {
+        "severity": "error",
+        "line": 19,
+        "column": 1,
+        "message": "'process' is not defined.",
+        "source": "'{a}' is not defined."
+      },
+      {
+        "severity": "error",
+        "line": 24,
+        "column": 1,
+        "message": "'process' is not defined.",
+        "source": "'{a}' is not defined."
+      },
+      {
+        "severity": "error",
+        "line": 41,
+        "column": 26,
+        "message": "'orientation' is not defined.",
+        "source": "'{a}' is not defined."
+      },
+      {
+        "severity": "error",
+        "line": 48,
+        "column": 1,
+        "message": "'process' is not defined.",
+        "source": "'{a}' is not defined."
+      },
+      {
+        "severity": "error",
+        "line": 53,
+        "column": 1,
+        "message": "'process' is not defined.",
+        "source": "'{a}' is not defined."
+      },
+      {
+        "severity": "error",
+        "line": 59,
+        "column": 1,
+        "message": "'process' is not defined.",
+        "source": "'{a}' is not defined."
+      },
+      {
+        "severity": "error",
+        "line": 65,
+        "column": 1,
+        "message": "'process' is not defined.",
+        "source": "'{a}' is not defined."
+      },
+      {
+        "severity": "error",
+        "line": 85,
+        "column": 1,
+        "message": "'process' is not defined.",
+        "source": "'{a}' is not defined."
+      }
+    ]
+  }
+}

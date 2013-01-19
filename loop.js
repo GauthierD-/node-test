@@ -22,7 +22,7 @@ process.nextTick(function() {
 
 //Move user 
 process.nextTick(function(){
-    var  = {
+    var move = {
         s   :   0.9108,
         x   :   0.4128,
         y   :   0,
