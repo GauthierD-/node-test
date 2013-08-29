@@ -2,7 +2,7 @@
 
 var StressTest = require('./src/ServerTesting.js').createServerTesting();
 var Metric = require('./src/Metric.js').createMetric();
-var options = require('src/Options.js');
+var options = require('./src/Options.js');
 var colors = require('colors');
 var util = require('util');
 options.process();

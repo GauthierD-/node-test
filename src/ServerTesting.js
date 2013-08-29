@@ -65,11 +65,11 @@ ServerTesting.prototype.start = function() {
     var nameLoop = null;
 
     if(this.yourLoop2 === 'true') {
-        nameLoop = "../loop/loop2.js";
+        nameLoop = "loop/loop2.js";
     } else if(this.yourLoop3 === 'true') {
-        nameLoop = "../loop/loop3.js";
+        nameLoop = "loop/loop3.js";
     } else {
-        nameLoop = "../loop/loop.js";
+        nameLoop = "loop/loop.js";
     }
 
     self.update();

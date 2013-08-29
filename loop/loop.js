@@ -38,7 +38,6 @@ process.nextTick(function(){
         y   :   0,
         z   :   0
     };
-    mydata.orientation = orientation;
     mydata.position = position;
     mydata.velocity = velocity;
     socket.emit("move", mydata);
