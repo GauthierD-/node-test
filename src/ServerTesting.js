@@ -4,12 +4,12 @@
 //
 //
 exports = module.exports = ServerTesting;
+
 var EventEmitter = require('events').EventEmitter;
-var util = require('util');
+var Metric = require('./Metric.js').createMetric();
 var clusterMaster = require('cluster-master');
 var io = require('socket.io-client'); 
-var Metric = require('./Metric.js').createMetric();
-
+var util = require('util');
 
 function ServerTesting() {
     "use strict";
@@ -65,11 +65,11 @@ ServerTesting.prototype.start = function() {
     var nameLoop = null;
 
     if(this.yourLoop2 === 'true') {
-        nameLoop = "loop2.js";
+        nameLoop = "../loop/loop2.js";
     } else if(this.yourLoop3 === 'true') {
-        nameLoop = "loop3.js";
+        nameLoop = "../loop/loop3.js";
     } else {
-        nameLoop = "loop.js";
+        nameLoop = "../loop/loop.js";
     }
 
     self.update();
