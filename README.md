@@ -1,6 +1,7 @@
 node-stresstest
 ===============
 
-My first npm package for stressing node server with cluster-master
+My first npm package for stressing node old server for my internship with cluster-master
 
-IN PROGRESS
+
+
